@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Donate — Mission Hygieia</title>
+<meta name="description" content="Donate via Zelle to support Mission Hygieia. 100% of your donation supports our mission. 501(c)(3) tax-deductible." />
+<link rel="icon" type="image/jpeg" href="img/logo.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Mission Hygieia home">
+      <img class="logo-img" src="img/logo.jpg" alt="Mission Hygieia" />
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="our-kits.html">Our kits</a></li>
+      <li><a href="our-team.html">Team</a></li>
+      <li><a href="shelters.html">Shelters</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html" class="btn btn-primary active" style="padding:8px 18px; font-size:14px;">Donate</a></li>
+    </ul>
+  </div>
+</nav>
+<script>
+  (function() {
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-links');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      toggle.classList.toggle('open', isOpen);
+    });
+    // Close menu when a link is clicked
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        menu.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
+
+<section class="page-header">
+  <div class="container">
+    <span class="eyebrow">Donate</span>
+    <h1>Donate via Zelle for <em>maximum</em> impact.</h1>
+    <p class="lead">One of the best ways to support Mission Hygieia is by donating through Zelle. There are no processing fees, so 100% of your contribution goes directly to the people we serve.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="container-read" style="padding: 0; margin: 0;">
+      <span class="eyebrow mb-3" style="display:block;">How to donate via Zelle</span>
+      <h2>Six steps. About two minutes.</h2>
+
+      <ol class="donate-steps mt-6">
+        <li>
+          <span class="donate-step-num">1</span>
+          <div>
+            <h3 class="mb-1">Log into your bank account</h3>
+            <p>Sign in to your online banking or mobile banking app, where Zelle is available.</p>
+          </div>
+        </li>
+        <li>
+          <span class="donate-step-num">2</span>
+          <div>
+            <h3 class="mb-1">Select "Send money"</h3>
+            <p>Locate the option to send money using Zelle within your banking app.</p>
+          </div>
+        </li>
+        <li>
+          <span class="donate-step-num">3</span>
+          <div>
+            <h3 class="mb-1">Enter our Zelle email address</h3>
+            <p>For the recipient, enter our Zelle email address: <a href="mailto:fundraiser.mh@gmail.com"><strong>fundraiser.mh@gmail.com</strong></a></p>
+          </div>
+        </li>
+        <li>
+          <span class="donate-step-num">4</span>
+          <div>
+            <h3 class="mb-1">Specify the donation amount</h3>
+            <p>Enter the amount you wish to donate.</p>
+          </div>
+        </li>
+        <li>
+          <span class="donate-step-num">5</span>
+          <div>
+            <h3 class="mb-1">Include a note (optional)</h3>
+            <p>Please include a note if you'd like to provide any specific information or designations for your donation.</p>
+          </div>
+        </li>
+        <li>
+          <span class="donate-step-num">6</span>
+          <div>
+            <h3 class="mb-1">Confirm and send</h3>
+            <p>Double-check the details, and when you're ready, confirm the transaction.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="callout mt-8">
+        <p>Your generous contribution through Zelle ensures that 100% of your donation directly supports our initiatives. We deeply appreciate your commitment to making a meaningful difference in the lives of those we serve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="surface-warm">
+  <div class="container">
+    <div style="max-width: 60ch;">
+      <span class="eyebrow mb-3" style="display:block;">Questions?</span>
+      <h2>Get in touch.</h2>
+      <p class="lead mt-3">If you have any questions about donating, partnerships, or other ways to support our work, send us a note.</p>
+      <a href="contact.html" class="btn btn-secondary mt-6">Contact us</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .donate-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .donate-steps > li {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: var(--s-3);
+    padding: var(--s-3) 0;
+    border-top: 1px solid var(--rule);
+    align-items: start;
+  }
+  .donate-steps > li:last-child {
+    border-bottom: 1px solid var(--rule);
+  }
+  .donate-step-num {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 1;
+    color: var(--blue);
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 480px) {
+    .donate-steps > li { grid-template-columns: 44px 1fr; gap: var(--s-2); }
+    .donate-step-num { font-size: 28px; width: 40px; height: 40px; }
+  }
+</style>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="display:inline-block;">
+        <img class="logo-img-footer" src="img/logo.jpg" alt="Mission Hygieia" />
+      </a>
+      <p style="margin-top: var(--s-3);">A 501(c)(3) nonprofit delivering hygiene kits to people experiencing homelessness — locally and globally.</p>
+    </div>
+    <div class="footer-col">
+      <h4>The mission</h4>
+      <ul>
+        <li><a href="our-kits.html">Our kits</a></li>
+        <li><a href="shelters.html">Shelter partners</a></li>
+        <li><a href="our-team.html">The team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get involved</h4>
+      <ul>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="contact.html">Volunteer</a></li>
+        <li><a href="contact.html">Start a chapter</a></li>
+        <li><a href="contact.html">Partner with us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:nonprofithygieia@gmail.com">nonprofithygieia@gmail.com</a></li>
+        <li><a href="contact.html">Send a message</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-social">
+      <a href="https://www.instagram.com/missionhygieia/" aria-label="Mission Hygieia on Instagram" title="Instagram" target="_blank" rel="noopener noreferrer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="https://www.tiktok.com/@missionhygieia" aria-label="Mission Hygieia on TikTok" title="TikTok" target="_blank" rel="noopener noreferrer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M14 3v10.5a3 3 0 1 1-3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 3c.3 2 1.6 3.6 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="https://www.youtube.com/@MissionHygieiaOfficial" aria-label="Mission Hygieia on YouTube" title="YouTube" target="_blank" rel="noopener noreferrer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2.5" y="6" width="19" height="12" rx="3" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M10.5 9.5v5l4-2.5-4-2.5Z" fill="currentColor"/>
+        </svg>
+      </a>
+    </div>
+    <span>© 2026 Mission Hygieia · 501(c)(3) nonprofit organization</span>
+    <span>Making hygiene accessible to all.</span>
+  </div>
+</footer>
+
+</body>
+</html>

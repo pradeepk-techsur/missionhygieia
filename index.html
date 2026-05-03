@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mission Hygieia — Hygiene kits for people experiencing homelessness</title>
+<meta name="description" content="A 501(c)(3) nonprofit delivering hygiene kits to people experiencing homelessness — locally and globally." />
+<link rel="icon" type="image/jpeg" href="img/logo.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Mission Hygieia home">
+      <img class="logo-img" src="img/logo.jpg" alt="Mission Hygieia" />
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="our-kits.html">Our kits</a></li>
+      <li><a href="our-team.html">Team</a></li>
+      <li><a href="shelters.html">Shelters</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html" class="btn btn-primary" style="padding:8px 18px; font-size:14px;">Donate</a></li>
+    </ul>
+  </div>
+</nav>
+<script>
+  (function() {
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-links');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      toggle.classList.toggle('open', isOpen);
+    });
+    // Close menu when a link is clicked
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        menu.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
+
+<!-- Hero -->
+<section style="padding-top: var(--s-12); padding-bottom: var(--s-16);">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow mb-3" style="display:block;">A 501(c)(3) nonprofit organization</span>
+        <h1 class="display" style="max-width: 14ch;">
+          Small kits.<br />Big <em>dignity</em>.
+        </h1>
+        <p class="lead mt-4" style="max-width: 56ch;">
+          Mission Hygieia delivers hygiene kits to people experiencing homelessness in our community and around the world. Every kit is hand-assembled by volunteers and distributed through partner shelters and aid organizations.
+        </p>
+        <div class="mt-6" style="display:flex; gap: var(--s-2); flex-wrap: wrap;">
+          <a href="donate.html" class="btn btn-primary">Donate</a>
+          <a href="contact.html" class="btn btn-tertiary">Volunteer with us</a>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <img src="img/hero-illustration.png" alt="Pencil illustration of a cupped hand holding a water droplet and lotus leaves, with a soap bar and sparkles — a quiet symbol of care and hygiene." />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The Basics — carousel -->
+<section class="surface-warm">
+  <div class="container">
+    <span class="eyebrow mb-6" style="display:block;">The basics</span>
+
+    <div class="carousel" id="basics-carousel">
+      <div class="carousel-track">
+
+        <div class="carousel-slide" data-slide="0">
+          <span class="eyebrow text-blue mb-3" style="display:block;">Our impact</span>
+          <span class="stat-num">880</span>
+          <h2 class="mt-2">Kits donated, so far.</h2>
+          <p class="lead mt-3" style="max-width: 56ch;">Hand-assembled by volunteers and distributed through our shelter and aid partners.</p>
+        </div>
+
+        <div class="carousel-slide" data-slide="1" hidden>
+          <span class="eyebrow text-blue mb-3" style="display:block;">Reach</span>
+          <span class="stat-num">Local + global</span>
+          <h2 class="mt-2">From Northern Virginia to Haiti.</h2>
+          <p class="lead mt-3" style="max-width: 56ch;">We serve shelters across the DMV and ship internationally through Medical Missionaries — wherever hygiene access is needed.</p>
+        </div>
+
+        <div class="carousel-slide" data-slide="2" hidden>
+          <span class="eyebrow text-blue mb-3" style="display:block;">Shelter partners</span>
+          <span class="stat-num">6</span>
+          <h2 class="mt-2">Shelters donated to.</h2>
+          <p class="lead mt-3" style="max-width: 56ch;">From Loudoun and Fairfax to Reston, plus international shipments through Medical Missionaries to Haiti.</p>
+        </div>
+
+        <div class="carousel-slide" data-slide="3" hidden>
+          <span class="eyebrow text-blue mb-3" style="display:block;">Tax-deductible</span>
+          <span class="stat-num">501(c)(3)</span>
+          <h2 class="mt-2">Registered nonprofit.</h2>
+          <p class="lead mt-3" style="max-width: 56ch;">Mission Hygieia is a 501(c)(3) registered nonprofit organization. Every donation is tax-deductible to the full extent allowed by law.</p>
+        </div>
+
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-btn" data-go="prev" aria-label="Previous slide">←</button>
+        <div class="carousel-dots" role="tablist">
+          <button class="carousel-dot active" data-target="0" aria-label="Slide 1"></button>
+          <button class="carousel-dot" data-target="1" aria-label="Slide 2"></button>
+          <button class="carousel-dot" data-target="2" aria-label="Slide 3"></button>
+          <button class="carousel-dot" data-target="3" aria-label="Slide 4"></button>
+        </div>
+        <button class="carousel-btn" data-go="next" aria-label="Next slide">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section>
+  <div class="container">
+    <span class="eyebrow mb-3" style="display:block;">How it works</span>
+    <h2 style="max-width: 18ch;">A simple loop. Donors fund it, volunteers build it, shelters distribute it.</h2>
+
+    <div class="how-grid" style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--s-6); margin-top: var(--s-8);">
+      <div>
+        <span class="eyebrow text-blue">01 — Donate</span>
+        <h3 class="mt-2 mb-2">Fund a kit.</h3>
+        <p>Your donation covers the supplies and delivery for hygiene kits. We're a registered 501(c)(3), so every dollar is tax-deductible.</p>
+      </div>
+      <div>
+        <span class="eyebrow text-blue">02 — Assemble</span>
+        <h3 class="mt-2 mb-2">We build it.</h3>
+        <p>Student volunteers gather monthly to pack kits in bulk. Wholesale supply runs mean your dollars buy supplies, not packaging.</p>
+      </div>
+      <div>
+        <span class="eyebrow text-blue">03 — Distribute</span>
+        <h3 class="mt-2 mb-2">Shelters hand it out.</h3>
+        <p>Our six partners across Loudoun, Fairfax, and Reston distribute kits directly to residents who need them most.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Chapter CTA -->
+<section class="surface-warm">
+  <div class="container">
+    <div style="max-width: 60ch;">
+      <span class="eyebrow mb-3" style="display:block;">For students</span>
+      <h2>Bring Mission Hygieia to your school.</h2>
+      <p class="lead mt-3">We'll send the chapter playbook — supply lists, shelter intros, fundraising templates. Most chapters launch their first kit drive within a month.</p>
+      <a href="contact.html" class="btn btn-secondary mt-6">Start a chapter</a>
+    </div>
+  </div>
+</section>
+
+<!-- Supporters -->
+<section>
+  <div class="container">
+    <span class="eyebrow mb-6" style="display:block;">Our supporters</span>
+
+    <div class="supporters-row" style="grid-template-columns: 1fr 1fr;">
+
+      <div class="supporter-card">
+        <img src="img/bfs.png" alt="Building Futures Society" class="supporter-logo" />
+      </div>
+
+      <div class="supporter-card">
+        <img src="img/techsur.jpg" alt="TechSur Solutions" class="supporter-logo" />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (max-width: 720px) {
+    .impact-stats { grid-template-columns: 1fr !important; gap: var(--s-4) !important; }
+    .how-grid { grid-template-columns: 1fr !important; }
+    .post-link { grid-template-columns: 1fr !important; gap: var(--s-1) !important; }
+  }
+</style>
+
+<script>
+  (function() {
+    const carousel = document.getElementById('basics-carousel');
+    if (!carousel) return;
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dots = carousel.querySelectorAll('.carousel-dot');
+    const prev = carousel.querySelector('[data-go="prev"]');
+    const next = carousel.querySelector('[data-go="next"]');
+    let current = 0;
+    const total = slides.length;
+
+    function show(idx) {
+      current = ((idx % total) + total) % total;
+      slides.forEach((s, i) => { s.hidden = (i !== current); });
+      dots.forEach((d, i) => { d.classList.toggle('active', i === current); });
+    }
+
+    prev.addEventListener('click', () => show(current - 1));
+    next.addEventListener('click', () => show(current + 1));
+    dots.forEach((d, i) => { d.addEventListener('click', () => show(i)); });
+
+    // Auto-advance every 6 seconds; pause on hover
+    let timer = setInterval(() => show(current + 1), 6000);
+    carousel.addEventListener('mouseenter', () => clearInterval(timer));
+    carousel.addEventListener('mouseleave', () => {
+      timer = setInterval(() => show(current + 1), 6000);
+    });
+  })();
+</script>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="display:inline-block;">
+        <img class="logo-img-footer" src="img/logo.jpg" alt="Mission Hygieia" />
+      </a>
+      <p style="margin-top: var(--s-3);">A 501(c)(3) nonprofit delivering hygiene kits to people experiencing homelessness — locally and globally.</p>
+    </div>
+    <div class="footer-col">
+      <h4>The mission</h4>
+      <ul>
+        <li><a href="our-kits.html">Our kits</a></li>
+        <li><a href="shelters.html">Shelter partners</a></li>
+        <li><a href="our-team.html">The team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get involved</h4>
+      <ul>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="contact.html">Volunteer</a></li>
+        <li><a href="contact.html">Start a chapter</a></li>
+        <li><a href="contact.html">Partner with us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:nonprofithygieia@gmail.com">nonprofithygieia@gmail.com</a></li>
+        <li><a href="contact.html">Send a message</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-social">
+      <a href="https://www.instagram.com/missionhygieia/" aria-label="Mission Hygieia on Instagram" title="Instagram" target="_blank" rel="noopener noreferrer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="https://www.tiktok.com/@missionhygieia" aria-label="Mission Hygieia on TikTok" title="TikTok" target="_blank" rel="noopener noreferrer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M14 3v10.5a3 3 0 1 1-3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 3c.3 2 1.6 3.6 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="https://www.youtube.com/@MissionHygieiaOfficial" aria-label="Mission Hygieia on YouTube" title="YouTube" target="_blank" rel="noopener noreferrer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2.5" y="6" width="19" height="12" rx="3" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M10.5 9.5v5l4-2.5-4-2.5Z" fill="currentColor"/>
+        </svg>
+      </a>
+    </div>
+    <span>© 2026 Mission Hygieia · 501(c)(3) nonprofit organization</span>
+    <span>Making hygiene accessible to all.</span>
+  </div>
+</footer>
+
+</body>
+</html>

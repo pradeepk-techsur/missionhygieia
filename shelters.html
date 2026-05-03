@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shelter Partners — Mission Hygieia</title>
+<meta name="description" content="The shelters and aid organizations that distribute Mission Hygieia kits — locally and internationally." />
+<link rel="icon" type="image/jpeg" href="img/logo.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Mission Hygieia home">
+      <img class="logo-img" src="img/logo.jpg" alt="Mission Hygieia" />
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="our-kits.html">Our kits</a></li>
+      <li><a href="our-team.html">Team</a></li>
+      <li><a href="shelters.html" class="active">Shelters</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html" class="btn btn-primary" style="padding:8px 18px; font-size:14px;">Donate</a></li>
+    </ul>
+  </div>
+</nav>
+<script>
+  (function() {
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-links');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      toggle.classList.toggle('open', isOpen);
+    });
+    // Close menu when a link is clicked
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        menu.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
+
+<section class="page-header">
+  <div class="container">
+    <span class="eyebrow">Shelter partners</span>
+    <h1>Six partners doing the <em>real</em> work.</h1>
+    <p class="lead">We don't run shelters. We supply them. These are the organizations on the front line — the people who get our kits into the hands that need them.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <ul class="list-rule">
+
+      <li>
+        <div class="shelter-row" style="display:grid; grid-template-columns: 1fr 200px; gap: var(--s-4); align-items: baseline;">
+          <div>
+            <h3 class="mb-2">Katherine Hanley Family Shelter</h3>
+            <p class="caption mb-2"><span class="tag">Family shelter</span> &nbsp; <span class="tag">Fairfax, VA</span></p>
+            <p>The first shelter we ever supplied. Provides emergency shelter and supportive services to families experiencing homelessness in Fairfax County.</p>
+          </div>
+          <div style="text-align: right;">
+            <a href="tel:5715226800" class="btn-quiet">(571) 522-6800</a>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="shelter-row" style="display:grid; grid-template-columns: 1fr 200px; gap: var(--s-4); align-items: baseline;">
+          <div>
+            <h3 class="mb-2">Good Shepherd Alliance</h3>
+            <p class="caption mb-2"><span class="tag">Transitional housing</span> &nbsp; <span class="tag">Loudoun County</span></p>
+            <p>Runs transitional housing programs for individuals and families across Loudoun County, with a focus on long-term stability.</p>
+          </div>
+          <div style="text-align: right;">
+            <a href="tel:7037241555" class="btn-quiet">(703) 724-1555</a>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="shelter-row" style="display:grid; grid-template-columns: 1fr 200px; gap: var(--s-4); align-items: baseline;">
+          <div>
+            <h3 class="mb-2">Mobile Hope</h3>
+            <p class="caption mb-2"><span class="tag">Youth services</span> &nbsp; <span class="tag">Loudoun County</span></p>
+            <p>Serves youth experiencing homelessness through a fleet of mobile units that meet kids where they are. One of our most active partners.</p>
+          </div>
+          <div style="text-align: right;">
+            <a href="tel:7037711400" class="btn-quiet">(703) 771-1400</a>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="shelter-row" style="display:grid; grid-template-columns: 1fr 200px; gap: var(--s-4); align-items: baseline;">
+          <div>
+            <h3 class="mb-2">Medical Missionaries</h3>
+            <p class="caption mb-2"><span class="tag">International aid</span> &nbsp; <span class="tag">Haiti</span></p>
+            <p>Provides medical care, clean water, and basic supplies to communities in Haiti. We send shelf-stable kits with their international shipments.</p>
+          </div>
+          <div style="text-align: right;">
+            <a href="tel:7033351800" class="btn-quiet">(703) 335-1800</a>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="shelter-row" style="display:grid; grid-template-columns: 1fr 200px; gap: var(--s-4); align-items: baseline;">
+          <div>
+            <h3 class="mb-2">Loudoun Homeless Services</h3>
+            <p class="caption mb-2"><span class="tag">Coordinated entry</span> &nbsp; <span class="tag">Loudoun County</span></p>
+            <p>The county's coordinated entry point. Loudoun Homeless Services assesses, refers, and places individuals and families into the right program.</p>
+          </div>
+          <div style="text-align: right;">
+            <a href="tel:5712583033" class="btn-quiet">(571) 258-3033</a>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="shelter-row" style="display:grid; grid-template-columns: 1fr 200px; gap: var(--s-4); align-items: baseline;">
+          <div>
+            <h3 class="mb-2">Embry Rucker Community Shelter</h3>
+            <p class="caption mb-2"><span class="tag">Emergency shelter</span> &nbsp; <span class="tag">Reston, VA</span></p>
+            <p>Provides emergency shelter, day-shelter services, and case management for adults experiencing homelessness in Reston and surrounding areas.</p>
+          </div>
+          <div style="text-align: right;">
+            <a href="tel:7034371975" class="btn-quiet">(703) 437-1975</a>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<section class="surface-warm">
+  <div class="container">
+    <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: var(--s-6);">
+      <div class="stat">
+        <span class="stat-num">5</span>
+        <span class="eyebrow">Virginia partners</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">1</span>
+        <span class="eyebrow">International</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">3</span>
+        <span class="eyebrow">Counties served</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">4–6</span>
+        <span class="eyebrow">Weeks between drops</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div style="max-width: 60ch;">
+      <span class="eyebrow mb-3" style="display:block;">For shelter directors</span>
+      <h2>Run a shelter? Let's talk.</h2>
+      <p class="lead mt-3">If you serve people experiencing homelessness and your residents need hygiene supplies, we'd like to add you to our route. No paperwork burden — just a conversation about what your residents need most.</p>
+      <a href="contact.html" class="btn btn-secondary mt-6">Become a partner</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (max-width: 720px) {
+    .shelter-row { grid-template-columns: 1fr !important; gap: var(--s-2) !important; }
+    .shelter-row > div:last-child { text-align: left !important; }
+  }
+</style>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="display:inline-block;">
+        <img class="logo-img-footer" src="img/logo.jpg" alt="Mission Hygieia" />
+      </a>
+      <p style="margin-top: var(--s-3);">A 501(c)(3) nonprofit delivering hygiene kits to people experiencing homelessness — locally and globally.</p>
+    </div>
+    <div class="footer-col">
+      <h4>The mission</h4>
+      <ul>
+        <li><a href="our-kits.html">Our kits</a></li>
+        <li><a href="shelters.html">Shelter partners</a></li>
+        <li><a href="our-team.html">The team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get involved</h4>
+      <ul>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="contact.html">Volunteer</a></li>
+        <li><a href="contact.html">Start a chapter</a></li>
+        <li><a href="contact.html">Partner with us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:nonprofithygieia@gmail.com">nonprofithygieia@gmail.com</a></li>
+        <li><a href="contact.html">Send a message</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-social">
+      <a href="https://www.instagram.com/missionhygieia/" aria-label="Mission Hygieia on Instagram" title="Instagram" target="_blank" rel="noopener noreferrer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="https://www.tiktok.com/@missionhygieia" aria-label="Mission Hygieia on TikTok" title="TikTok" target="_blank" rel="noopener noreferrer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M14 3v10.5a3 3 0 1 1-3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 3c.3 2 1.6 3.6 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="https://www.youtube.com/@MissionHygieiaOfficial" aria-label="Mission Hygieia on YouTube" title="YouTube" target="_blank" rel="noopener noreferrer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2.5" y="6" width="19" height="12" rx="3" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M10.5 9.5v5l4-2.5-4-2.5Z" fill="currentColor"/>
+        </svg>
+      </a>
+    </div>
+    <span>© 2026 Mission Hygieia · 501(c)(3) nonprofit organization</span>
+    <span>Making hygiene accessible to all.</span>
+  </div>
+</footer>
+
+</body>
+</html>
